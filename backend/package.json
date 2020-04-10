@@ -1,0 +1,18 @@
+{
+  "name": "NODEJS",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Daniel Fernando <daniel_fmpc@hotmail.com.br>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid4": "^1.1.4",
+    "uuidv4": "^6.0.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
