@@ -1,9 +1,14 @@
-import React, {useState} from 'react';
+// import image from './assets/background.png'
+import React, {useState, useEffect} from 'react';
 import './App.css';
-import image from './assets/background.png'
+import api from './services/api.js'
 import Header from './components/Header';
 
-
+useEffect(()=> {
+  api.get('/projects').then(response => {
+    console.log(response);
+  });
+}, []);
 
 function App() {
   const [projects, setProjects] = useState(["Dev app", "front-end"]);
@@ -15,7 +20,7 @@ function App() {
   return(
   <>
     <Header title="Projects" />
-    <img src={image} width={300} alt="plano de fundo"/>
+    {/* <img src={image} width={300} alt="plano de fundo"/> */}
     <ul>
       {projects.map(project => <li key={project}>{project}</li>)}
     </ul>
